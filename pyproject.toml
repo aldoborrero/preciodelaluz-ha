@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "preciodelaluz-ha"
+version = "0.1.0"
+description = ""
+authors = ["Aldo Borrero <82811+aldoborrero@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+  {include = "custom_components/preciodelaluz"},
+  {include = "cli"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+homeassistant = "^2023.8.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-mock = "^3.11.1"
+pytest-asyncio = "^0.21.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+cli = 'cli.__main__:main'
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.isort]
+force-sort-within-sections = true
+no-lines-before = ["local-folder"]
+known-first-party = ["cli"]

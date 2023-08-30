@@ -1,0 +1,9 @@
+{
+  "domain": "preciodelaluz",
+  "name": "PrecioDeLaluz",
+  "documentation": "",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": ["requests==2.25.1"],
+  "iot_class": "cloud_polling"
+}
